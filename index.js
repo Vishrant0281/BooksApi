@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://vrank:Vrank_2001@cluster0.5hxvx.mongodb.net/Stud
         app.use(bodyParser.urlencoded({extended:true}));
         app.use(express.json());
         app.use("/api",route);
-        app.listen(3000,() =>{
+        app.listen(process.env.PORT || 3000,() =>{
             console.log("server started..!!");
         })
     }
